@@ -16,7 +16,7 @@ def details():
         "time:": datetime.datetime.now().strftime("%Y-%m-%d. %H:%M:%S"),
         "data": {
             "name": "IDP",
-            "version": "1.0.0",
+            "version": "3.0.0",
             "description": "This is a sample IDP application built with Flask and Backstage."
         }
     })
