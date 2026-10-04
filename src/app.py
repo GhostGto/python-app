@@ -25,7 +25,9 @@ def details():
 
 def healthz():
     return jsonify({
-        "status": "up"
+        "status": "up",
+        "hostname": socket.gethostname(),
+        "time:": datetime.datetime.now().strftime("%Y-%m-%d. %H:%M:%S")
     }), 200
 
 if __name__ == '__main__':
