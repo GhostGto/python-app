@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 def details():
     return jsonify({
-        "message": "Hello building the IDP with backstage",
+        "message": "Hello building the IDP with backstage and flask",
         "status": "success",
         "hostname": socket.gethostname(),
         "time:": datetime.datetime.now().strftime("%Y-%m-%d. %H:%M:%S"),
