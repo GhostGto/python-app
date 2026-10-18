@@ -11,7 +11,7 @@ app = Flask(__name__)
 def details():
     return jsonify({
         "message": "Hello building the IDP with backstage and flask.",
-        "message2": "This is a sample IDP also in ArgoCD!",
+        "message2": "This is a sample IDP also in ArgoCD! :D",
         "status": "success",
         "hostname": socket.gethostname(),
         "time:": datetime.datetime.now().strftime("%Y-%m-%d. %H:%M:%S"),
