@@ -60,7 +60,7 @@ jobs:
         shell: bash
         run: |
           echo ${{ needs.ci.outputs.commit_id }}
-          yq -i '.image.tag = strenv(commit_id)' python-app/charts/python-app/values.yaml
+          yq -Yi '.image.tag = strenv(commit_id)' python-app/charts/python-app/values.yaml
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
