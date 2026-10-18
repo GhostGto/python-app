@@ -52,6 +52,7 @@ jobs:
           argocd login argocd.test.com:80 \
             --insecure \
             --grpc-web \
+            --plaintext \
             --username admin \
             --password ${{ secrets.ARGOCD_PASS }} 
 
