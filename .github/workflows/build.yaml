@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  docker:
+  ci:
     runs-on: self-hosted
     steps:
       -
@@ -32,3 +32,15 @@ jobs:
         with:
           push: true
           tags: ghost0/python-app:${{ steps.vars.outputs.sha_short }}
+
+  cd:
+    runs-on: self-hosted
+    steps:
+      env:
+        name: ArgoCD Login
+        password: ${{ secrets.ARGOCD_PASS }}
+        username: admin
+
+      - name: ArgoCD app sync
+        shell: bash
+        run:  argocd login argocd.test.com:80 --insecure --grpc-web --username admin --password 
